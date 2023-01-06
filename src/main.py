@@ -29,8 +29,8 @@ if __name__ == "__main__":
     log.info(f'Loading {len(cogs)} cogs ...')
 
     for cog in cogs:
-		bot.load_extension(f'cogs.{cog}')
-		log.info(f'Loaded cog {cog}')
+        bot.load_extension(f'cogs.{cog}')
+        log.info(f'Loaded cog {cog}')
 
     token = os.getenv("BOT_TOKEN")
     bot.run(token=token)
