@@ -13,9 +13,9 @@ log = logging.getLogger('BOT-MAIN') # ?
 # Discord Bot definition
 bot = commands.Bot(
     command_prefix=None, # Nur / commands
-    intents=discord.intents.default(), # ?
+    intents=discord.Intents.default(), # ?
     activity=discord.Activity(type=discord.ActivityType.watching, name="Discord"), # aktivität
-    status=discord.Status(type=discord.Status.online), # online status
+    status=discord.Status.online, # online status
     sync_commands=False, # ?
     delete_not_existing_commands=False, # ?
 )
