@@ -11,10 +11,14 @@ load_dotenv()
 logging.basicConfig(level=logging.INFO) # Log Level INFO
 log = logging.getLogger('BOT-MAIN') # Bot logging as BOT-MAIN
 
+# Define Intents
+intents = discord.Intents.default()
+intents.members = True
+
 # Discord Bot definition
 bot = commands.Bot(
     command_prefix=commands.when_mentioned_or(), # Nur / commands
-    intents=discord.Intents.default(), # ?
+    intents=intents, # ?
     activity=discord.Activity(type=discord.ActivityType.watching, name="Discord"), # aktivität
     status=discord.Status.online, # online status
     sync_commands=True, # ?
@@ -25,7 +29,7 @@ if __name__ == "__main__":
     log.info("Starting Discord Bot ...")
 
     log.info('Loading cogs...')
-    cogs = [file.stem for file in Path('cogs').glob('**/*.py') if not file.name.startswith("__")]
+    cogs = [file.stem for file in Path('cogs').glob('**/*.py') if not file.name.startswith('__')]
     log.info(f'Loading {len(cogs)} cogs ...')
 
     for cog in cogs:
