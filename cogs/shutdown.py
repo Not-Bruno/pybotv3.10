@@ -14,7 +14,7 @@ class ShutdownCommand(commands.Cog):
 
         await bot.close()
         await ctx.respond()
-        log.info("Bot Closed")
+        log.info("Bot Closed ...")
 
 def setup(bot):
 	bot.add_cog(ShutdownCommand(bot))
