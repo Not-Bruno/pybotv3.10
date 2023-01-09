@@ -4,7 +4,7 @@ from discord.ext impoer commands
 
 class ShutdownCommand(commands.Cog):
     def __init__(self, bot):
-        self.bot = Bot
+        self.bot = bot
 
     @commands.Cog.slash_command(name="shutdown", description="Shutdown Bot")
     @commands.has_permissions(administrator=True)
