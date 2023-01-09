@@ -8,7 +8,7 @@ class UserInfoCommand(commands.Cog):
 		self.bot = bot
 
 	@commands.Cog.slash_command(name='userinfo', description='Get info about a user')
-	async def userinfo_command(self, ctx, user: discord.Member = None):
+	async def userinfo(self, ctx, user: discord.Member = None):
 		user = user or ctx.author
 
 		embed = discord.Embed(title=f'User Info - {user}', color=user.top_role.color)

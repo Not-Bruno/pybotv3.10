@@ -33,7 +33,7 @@ if __name__ == '__main__':
 	log.info('Starting bot...')
 
 	log.info('Loading cogs...')
-	cogs = [file.stem for file in Path('cogs').glob('**/*.py') if not file.name.startswith('__')]
+	cogs = [file.stem for file in Path('cogs') if not file.name.startswith('__')]
 	log.info(f'Loading {len(cogs)} cogs...')
 
 	for cog in cogs:
